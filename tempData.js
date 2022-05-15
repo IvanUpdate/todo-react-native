@@ -2,7 +2,7 @@
 
 export const tempData = [
     {
-        name: "Plan a Trip",
+        name: "Купить еду",
         color: "#24A6D9",
         todos: [
             {
@@ -42,7 +42,7 @@ export const tempData = [
         ]
     },
     {
-        name: "Переехать пожить в другую страну",
+        name: "Move to another country",
         color: "#8c0c8a",
         todos: [
             {
