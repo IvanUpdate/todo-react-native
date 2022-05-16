@@ -2,7 +2,7 @@
 
 export const tempData = [
     {
-        name: "Купить еду",
+        name: "Купить мороженое",
         color: "#24A6D9",
         todos: [
             {

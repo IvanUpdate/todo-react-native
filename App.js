@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, TouchableOpacity, FlatList, Modal} from 'react-n
 import {colors} from './Colors';
 import {AntDesign} from '@expo/vector-icons';
 import {tempData} from "./tempData";
-import TodoList from "./components/TodoList";
+import {TodoList} from "./components/TodoList";
 import {useState} from "react";
 import {AddListModal} from "./components/AddListModal";
 
@@ -10,6 +10,10 @@ export default function App() {
     const [addTodoVisible, setAddTodoVisible] = useState(false);
 
     const toggleAddTodoModal = () => setAddTodoVisible(!addTodoVisible);
+
+    const renderList = list => {
+        return <TodoList list={list} />
+    }
 
     return (
         <View style={styles.container}>
@@ -34,7 +38,7 @@ export default function App() {
                     keyExtractor={item => item.name}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
-                    renderItem={({item}) => <TodoList list = {item} />}
+                    renderItem={({item}) => renderList(item)}
                 />
             </View>
         </View>
